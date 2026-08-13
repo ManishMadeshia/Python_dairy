@@ -97,7 +97,7 @@ while True:
 '''
 
 
-'''--------------break--------------'''
+'''--------------break--------------
 #Q1. Print numbers from 1 to 10, but stop when the number becomes 6.
 
 for i in range(1,10):
@@ -142,7 +142,7 @@ while True:
         print("no is negative")
         break
 
-#Q6. ⭐ Create a simple password program. Give the user a maximum of 3 attempts. Stop immediately if the correct password is entered.
+#Q6.  Create a simple password program. Give the user a maximum of 3 attempts. Stop immediately if the correct password is entered.
 
 count = 0
 passwd = 12345
@@ -155,3 +155,42 @@ while count <3:
     else : 
         print("please enter correct passwd")
         count = count+1
+'''
+
+
+''' -----------------nested loop------------------'''
+ # Q1 Print this:
+'''
+1 1
+1 2
+1 3
+2 1
+2 2
+2 3
+3 1
+3 2
+3 3
+'''
+
+for i in range(1,4):
+    for j in range(1,4):
+        print(i,j)
+
+
+#Q2 print star pattern : 
+
+for i in range(1,6):
+    for j in range(i):
+        print('*', end="")
+    print()
+
+
+for i in range(1,5):
+    print("******")
+
+
+#Q4. Print multiplication tablr 1 to 5
+
+for i in range(1,6):
+    for j in range(1,11):
+        print(f"{i} * {j} = {i*j}")
