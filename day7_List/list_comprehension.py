@@ -53,3 +53,4 @@ temperatures = [32, 28, 35, 40, 25, 30, 38]
 
 new_tmp = [i for i in temperatures if i>=30]
 print(new_tmp)
+
