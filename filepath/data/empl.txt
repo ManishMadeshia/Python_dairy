@@ -1,0 +1,5 @@
+Name:Manish, Salary: 35000
+Name:bipin, Salary: 30000
+Name:brijesh, Salary: 70000
+Name:Rohit, Salary: 34554
+Name:aman, Salary: 33333

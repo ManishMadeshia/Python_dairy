@@ -1,0 +1,20 @@
+Employees: emp1
+Name: manish
+Salary: 43253
+
+Employees: emp2
+Name: anish
+Salary: 43343
+
+Employees: emp3
+Name: manish
+Salary: 40000
+
+Employees: emp4
+Name: manish
+Salary: 23000
+
+Employees: emp5
+Name: manish
+Salary: 98372
+
