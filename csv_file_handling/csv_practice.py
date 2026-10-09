@@ -97,3 +97,70 @@ with open('employee.csv','r') as file:
     for row in reader:
         if row['department'] == 'Data Engineering' and int(row['salary']) > 40000:
             print(row['name'], "-", row['salary'])
+
+
+#11 Create students.csv using csv.writer()
+'''
+id,name,course
+1,Manish,Python
+2,Rahul,SQL
+3,Amit,Spark
+'''
+
+with open("students.csv",'w',newline='') as file:
+    writer = csv.writer(file)
+
+    writer.writerow(["id","name","course"])
+    writer.writerow([1,"Manish",'Python'])
+    writer.writerow([2,'Rahul','SQL'])
+    writer.writerow([3,'Amit',"Spark"])
+
+'''#12 Use writerow() for one employee
+Question: Write the header and one employee.
+
+with open("students.csv","w") as file:
+writer = csv.writer(file)
+
+writer.writerow(["id","name","course"])
+writer.writerow([4,"Manisha","data specialist"])
+'''
+
+
+'''
+Use writerows() for multiple employees
+Question: Write 5 employees using writerows().
+'''
+
+employees=[
+    [101, "Manish", 35000],
+    [102, "Rahul", 40000],
+    [103, "Amit", 45000],
+    [104, "Priya", 38000],
+    [105, "Neha", 55000]
+]
+
+with open('employees.csv','w',newline="") as file:
+    writer = csv.writer(file)
+
+    writer.writerow(['id','name','salary'])
+    writer.writerows(employees)
+
+'''
+Write employee dictionaries
+Question: Create 3 employee dictionaries and write them using DictWriter().
+'''
+
+employeess = [
+    {'id':101,'name':"manish",'salary':43234},
+    {'id':102,'name':"anish",'salary':12345},
+    {'id':103,'name':"manishaa",'salary':445734},
+    {'id':104,'name':"nish",'salary':42344}
+]
+
+with open("employeess.csv","w",newline="") as file:
+    fieldname = ["id",'name',"salary"]
+
+    writer = csv.DictWriter(file,fieldnames=fieldname)
+
+    writer.writeheader()
+    writer.writerows(employeess)
