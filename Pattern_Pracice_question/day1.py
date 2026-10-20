@@ -1,3 +1,4 @@
+'''
 #q1. You are given an integer n. Your task is to return a square pattern of size n x n made up of the character '*', represented as a list of strings.
 
 n = int(input("Enter a number: "))
@@ -35,7 +36,7 @@ print(result)
 #q3. You are given two integers, n and m. Your task is to return a rectangle pattern of '*', where n represents the number of rows (length) and m represents the number of columns (breadth).
 
 #condition : Two integers n and m, where 1 <= n, m <= 100.
-''' Input: n = 4, m = 5, Output: ['*****', '*****', '*****', '*****'] '''
+#Input: n = 4, m = 5, Output: ['*****', '*****', '*****', '*****']
 
 n = int(input("Enter numner n: "))
 m = int(input("Enter numner m: "))
@@ -69,4 +70,30 @@ for i in range(n):
      row = '*' * (n-i) 
      res.append(row)
 print(res)
+
+'''
+
+#q6. You are given an integer n. Your task is to return a pyramid pattern of '*' where each side has n rows, represented as a list of strings. The pyramid is centered, with 1 star in the first row, 3 stars in the second row, and so on, increasing by 2 stars per row until the base row has 2n - 1 stars.
+
+n = int(input("Enter Number N: "))
+ress=[]
+for i in range(n):
+    space = ' '* (n-i-1)
+    stars = '*' * (2 * i + 1)
+    res = space + stars
+    ress.append(res)
+print(ress)
+
+
+#q7. You are given an integer n. Your task is to return a right-angled triangle pattern of '*', where each row contains stars aligned to the right. The first row has one star, the second row has two stars, and so on, until the nth row has n stars.
+
+ress = []
+for i in range(1,n+1):
+    space = ' '* (n-i)   
+    star = '*' * i
+    res = space + star
+    print(res)
+    ress.append(res)
+print(ress)
+
 
