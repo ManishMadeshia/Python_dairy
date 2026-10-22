@@ -149,3 +149,37 @@ def merge_two_sorted_lists(list1, list2):
     return new
 
 print(merge_two_sorted_lists(lst1,lst2))
+
+#Rotate a List (Without Slicing) You are given a list of integers and an integer k. Write a Python function to rotate the list to the right by k positions without using slicing. A rotation shifts elements from the end of the list to the front.
+
+#Input: lst = [1, 2, 3, 4, 5], k = 2
+
+
+k = 2
+lst = [1, 2, 3, 4, 5]
+
+for i in range(k):
+    ele = lst.pop()
+    lst.insert(0,ele)
+
+print(lst)
+
+lst = [1,2,3,4,5]
+k = 3
+
+def k_rotate(lst,k):
+    if len(lst) == 0:
+        return lst
+
+    for i in range(k):
+        ele = lst.pop()
+        lst.insert(0,ele)
+
+    return lst
+
+print(k_rotate(lst,k))
+
+#Merge Lists to Dictionary Design a Python function named merge_lists_to_dictionary to merge two lists into a dictionary where elements from the first list act as keys and elements from the second list act as values.
+
+keys = ['a', 'b', 'c'], values = [1, 2, 3]
+
